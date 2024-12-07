@@ -3,7 +3,7 @@
 #' \code{splineCox.reg2} estimates the parameters of a five-parameter spline Cox model for multiple specified shapes
 #' and selects the best fitting model based on the minimization of the log-likelihood function.
 #' The function calculates the estimates for the model parameters (beta) and the baseline hazard scale parameter (lambda), using non-linear optimization.
-#'
+#' @export
 #' @importFrom stats nlm
 #' @import joint.Cox
 #' @param t.event a vector for time-to-event
