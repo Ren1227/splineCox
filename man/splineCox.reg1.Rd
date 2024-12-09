@@ -34,9 +34,9 @@ Default is "constant"}
 \value{
 A list containing the following components:
 \item{beta}{A named vector with the estimates, standard errors, and 95\% confidence intervals for the regression coefficients}
-\item{lambda}{A named vector with the estimate, standard error, and 95\% confidence interval for the baseline hazard parameter}
+\item{gamma}{A named vector with the estimate, standard error, and 95\% confidence interval for the baseline hazard parameter}
 }
 \description{
 \code{splineCox.reg1} estimates the parameters of a five-parameter spline Cox model based on a specified shape for the baseline hazard function.
-The function calculates the estimates for the model parameters (beta) and the baseline hazard scale parameter (lambda), using non-linear optimization.
+The function calculates the estimates for the model parameters (beta) and the baseline hazard scale parameter (gamma), using non-linear optimization.
 }

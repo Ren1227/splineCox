@@ -2,7 +2,7 @@
 #' @description
 #' \code{splineCox.reg2} estimates the parameters of a five-parameter spline Cox model for multiple specified shapes
 #' and selects the best fitting model based on the minimization of the log-likelihood function.
-#' The function calculates the estimates for the model parameters (beta) and the baseline hazard scale parameter (lambda), using non-linear optimization.
+#' The function calculates the estimates for the model parameters (beta) and the baseline hazard scale parameter (gamma), using non-linear optimization.
 #' @export
 #' @importFrom stats nlm
 #' @import joint.Cox
@@ -20,7 +20,7 @@
 #'   \item{model}{The baseline hazard shape that resulted in the best fit}
 #'   \item{parameter}{The specified shape parameter that resulted in the best fit}
 #'   \item{beta}{A named vector with the estimates, standard errors, and 95% confidence intervals for the regression coefficients}
-#'   \item{lambda}{A named vector with the estimate, standard error, and 95% confidence interval for the baseline hazard parameter}
+#'   \item{gamma}{A named vector with the estimate, standard error, and 95% confidence interval for the baseline hazard parameter}
 
 
 splineCox.reg2 <- function (t.event, event, Z, xi1 = min(t.event), xi3 = max(t.event),
@@ -62,17 +62,17 @@ splineCox.reg2 <- function (t.event, event, Z, xi1 = min(t.event), xi3 = max(t.e
   res <- unlist(result[best.index], recursive = FALSE)
 
   beta.est = res$est[2:(1 + p)]
-  lam.est  = exp(res$est[1])
+  gam.est  = exp(res$est[1])
   H        = -res$hessian
   V        = solve(-H, tol = 10^(-100))
   beta.se  = sqrt(diag(V)[2:(1 + p)])
-  lam.se   = sqrt(lam.est %*% V[1, 1] %*% lam.est)
+  gam.se   = sqrt(gam.est %*% V[1, 1] %*% gam.est)
   b.lower  = beta.est - 1.96 * beta.se
   b.upper  = beta.est + 1.96 * beta.se
-  l.lower  = lam.est - 1.96 * lam.se
-  l.upper  = lam.est + 1.96 * lam.se
+  l.lower  = gam.est - 1.96 * gam.se
+  l.upper  = gam.est + 1.96 * gam.se
   beta.res = c(estimate = beta.est, SE = beta.se, Lower = b.lower, Upper = b.upper)
-  lam.res  = c(estimate = lam.est,  SE = lam.se,  Lower = l.lower, Upper = l.upper)
+  gam.res  = c(estimate = gam.est,  SE = gam.se,  Lower = l.lower, Upper = l.upper)
   list(model = best.fit, parameter = unname(unlist(shape.list[best.fit])),
-       beta  = beta.res, lambda = lam.res)
+       beta  = beta.res, gamma = gam.res)
 }

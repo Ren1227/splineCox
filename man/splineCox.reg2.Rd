@@ -37,10 +37,10 @@ A list containing the following components:
 \item{model}{The baseline hazard shape that resulted in the best fit}
 \item{parameter}{The specified shape parameter that resulted in the best fit}
 \item{beta}{A named vector with the estimates, standard errors, and 95\% confidence intervals for the regression coefficients}
-\item{lambda}{A named vector with the estimate, standard error, and 95\% confidence interval for the baseline hazard parameter}
+\item{gamma}{A named vector with the estimate, standard error, and 95\% confidence interval for the baseline hazard parameter}
 }
 \description{
 \code{splineCox.reg2} estimates the parameters of a five-parameter spline Cox model for multiple specified shapes
 and selects the best fitting model based on the minimization of the log-likelihood function.
-The function calculates the estimates for the model parameters (beta) and the baseline hazard scale parameter (lambda), using non-linear optimization.
+The function calculates the estimates for the model parameters (beta) and the baseline hazard scale parameter (gamma), using non-linear optimization.
 }
