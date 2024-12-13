@@ -51,7 +51,7 @@ splineCox.reg2 <- function(t.event, event, Z, xi1 = min(t.event), xi3 = max(t.ev
   })
 
   loglik.values = sapply(results, function(res) res$loglik["LogLikelihood"])
-  best.index = which.min(loglik.values)
+  best.index = which.max(loglik.values)
   best.result = results[[best.index]]
 
   other.loglik = loglik.values[-best.index]
