@@ -15,12 +15,16 @@
 #'              Default is "constant"
 #' @param p0 Initial values to maximize the likelihood (1 + p parameters; baseline hazard scale parameter and p regression coefficients)
 #' @return A list containing the following components:
+#'   \item{model}{A character string indicating the shape of the baseline hazard function used.}
+#'   \item{parameter}{A numeric vector of the parameters defining the baseline hazard shape.}
 #'   \item{beta}{A named vector with the estimates, standard errors, and 95% confidence intervals for the regression coefficients}
 #'   \item{gamma}{A named vector with the estimate, standard error, and 95% confidence interval for the baseline hazard parameter}
-
+#'   \item{loglik}{A named vector containing the log-likelihood (\code{LogLikelihood}),
+#'                 Akaike Information Criterion (\code{AIC}), and Bayesian Information
+#'                 Criterion (\code{BIC})}
 
 splineCox.reg1 <- function (t.event, event, Z, xi1 = min(t.event), xi3 = max(t.event),
-                            model = "constant", p0 = rep(0, 1 + p))
+                            model = "constant", p0 = rep(0, 1 + ncol(as.matrix(Z))))
 {
   shape.list = list(increase  = c(0.05, 0.1, 0.15, 0.3, 0.4),
                     constant  = c(0.125, 0.25, 0.25, 0.25, 0.125),
@@ -31,6 +35,11 @@ splineCox.reg1 <- function (t.event, event, Z, xi1 = min(t.event), xi3 = max(t.e
                     bathtub1  = c(0.3, 0.1995, 0.001, 0.1995, 0.3),
                     bathtub2  = c(0.3, 0.001, 0.1009, 0.299, 0.3),
                     bathtub3  = c(0.3, 0.299, 0.1009, 0.001, 0.3))
+
+  if (!model %in% names(shape.list)) {
+    stop("Invalid model name. Choose one from: ", paste(names(shape.list), collapse = ", "))
+  }
+
   d = event
   Z = as.matrix(Z)
   p = ncol(Z)
@@ -50,6 +59,13 @@ splineCox.reg1 <- function (t.event, event, Z, xi1 = min(t.event), xi3 = max(t.e
 
   res = nlm(l.func, p = p0, hessian = TRUE)
 
+  LogLik  = -res$minimum
+  k       = p + 1
+  n       = length(d)
+  AIC     = -2 * LogLik + 2 * k
+  BIC     = -2 * LogLik + log(n) * k
+  lik.res = c(LogLikelihood = LogLik, AIC = AIC, BIC = BIC)
+
   beta.est = res$est[2:(1 + p)]
   gam.est  = exp(res$est[1])
   H        = -res$hessian
@@ -63,7 +79,8 @@ splineCox.reg1 <- function (t.event, event, Z, xi1 = min(t.event), xi3 = max(t.e
   beta.res = c(estimate = beta.est, SE = beta.se, Lower = b.lower, Upper = b.upper)
   gam.res  = c(estimate = gam.est , SE = gam.se,  Lower = l.lower, Upper = l.upper)
   list(model = model, parameter = para,
-       beta  = beta.res, gamma = gam.res)
+       beta  = beta.res, gamma = gam.res,
+       loglik = lik.res)
 }
 
 

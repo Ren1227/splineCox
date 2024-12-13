@@ -11,7 +11,7 @@ splineCox.reg2(
   xi1 = min(t.event),
   xi3 = max(t.event),
   model = names(shape.list),
-  p0 = rep(0, 1 + p)
+  p0 = rep(0, 1 + ncol(as.matrix(Z)))
 )
 }
 \arguments{
@@ -34,10 +34,15 @@ Default is \code{names(shape.list)} which includes all available models.}
 }
 \value{
 A list containing the following components:
-\item{model}{The baseline hazard shape that resulted in the best fit}
-\item{parameter}{The specified shape parameter that resulted in the best fit}
+\item{model}{A character string indicating the shape of the baseline hazard function used.}
+\item{parameter}{A numeric vector of the parameters defining the baseline hazard shape.}
 \item{beta}{A named vector with the estimates, standard errors, and 95\% confidence intervals for the regression coefficients}
 \item{gamma}{A named vector with the estimate, standard error, and 95\% confidence interval for the baseline hazard parameter}
+\item{loglik}{A named vector containing the log-likelihood (\code{LogLikelihood}),
+Akaike Information Criterion (\code{AIC}), and Bayesian Information
+Criterion (\code{BIC}) for the best-fitting model}
+\item{other_models}{A data frame containing the log-likelihood (\code{LogLikelihood}) for all other evaluated models,
+with model names as row names.}
 }
 \description{
 \code{splineCox.reg2} estimates the parameters of a five-parameter spline Cox model for multiple specified shapes
