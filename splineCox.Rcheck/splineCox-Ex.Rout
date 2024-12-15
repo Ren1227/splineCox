@@ -152,7 +152,11 @@ detaching 'package:joint.Cox', 'package:survival'
 
 > options(digits = 7L)
 > base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
+<<<<<<< HEAD
 Time elapsed:  1 0.19 1.24 NA NA 
+=======
+Time elapsed:  1.05 0.14 1.22 NA NA 
+>>>>>>> e6b3f1b87029d7b7b7a27d821ffd107a23caf45a
 > grDevices::dev.off()
 null device 
           1 

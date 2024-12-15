@@ -1,6 +1,7 @@
 Hmm ... looks like a package
 Converting parsed Rd's to LaTeX 
 Creating pdf output from LaTeX ...
+<<<<<<< HEAD
 This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
@@ -125,3 +126,11 @@ Transcript written on Rd2.log.
 Saving output to 'splineCox-manual.pdf' ...
 Done
 You may want to clean up by 'rm -Rf C:/Users/A223MS~1/AppData/Local/Temp/RtmpsHOcHh/Rd2pdf69105406106e'
+=======
+Error in texi2dvi(file = file, pdf = TRUE, clean = clean, quiet = quiet,  : 
+  pdflatex is not available
+Error in texi2dvi(file = file, pdf = TRUE, clean = clean, quiet = quiet,  : 
+  pdflatex is not available
+Error in running tools::texi2pdf()
+You may want to clean up by 'rm -Rf C:/Users/A223MS~1/AppData/Local/Temp/RtmpQ9AOLG/Rd2pdf52e89d9218d'
+>>>>>>> e6b3f1b87029d7b7b7a27d821ffd107a23caf45a

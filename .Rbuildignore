@@ -7,7 +7,12 @@
 ^\\.gitignore$
 ^vignettes/.gitignore$
 ^LICENSE\.md$
+<<<<<<< HEAD
 ^Meta$
 ^cran-comments\.md$
 ^doc$
 ^texput\.log$
+=======
+^doc$
+^Meta$
+>>>>>>> e6b3f1b87029d7b7b7a27d821ffd107a23caf45a
