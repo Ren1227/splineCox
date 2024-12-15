@@ -1,7 +1,6 @@
 Hmm ... looks like a package
 Converting parsed Rd's to LaTeX 
 Creating pdf output from LaTeX ...
-<<<<<<< HEAD
 This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
@@ -41,7 +40,7 @@ Package rerunfilecheck Warning: File `Rd2.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
  )<c:/Users/a223ms012t/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><c:/Users/a223ms012t/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Users/a223ms012t/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/Users/a223ms012t/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Users/a223ms012t/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Users/a223ms012t/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Rd2.pdf (4 pages, 79661 bytes).
+Output written on Rd2.pdf (4 pages, 79684 bytes).
 Transcript written on Rd2.log.
 This is makeindex, version 2.17 [TeX Live 2024] (kpathsea + Thai support).
 Scanning input file Rd2.idx....done (2 entries accepted, 0 rejected).
@@ -84,7 +83,7 @@ Package rerunfilecheck Warning: File `Rd2.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
  )<c:/Users/a223ms012t/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><c:/Users/a223ms012t/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Users/a223ms012t/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/Users/a223ms012t/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Users/a223ms012t/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Users/a223ms012t/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Rd2.pdf (5 pages, 80418 bytes).
+Output written on Rd2.pdf (5 pages, 80458 bytes).
 Transcript written on Rd2.log.
 This is makeindex, version 2.17 [TeX Live 2024] (kpathsea + Thai support).
 Scanning input file Rd2.idx....done (2 entries accepted, 0 rejected).
@@ -121,16 +120,8 @@ Writing index file Rd2.idx
 [4]
 
 [5]) (./Rd2.aux) )<c:/Users/a223ms012t/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><c:/Users/a223ms012t/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Users/a223ms012t/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/Users/a223ms012t/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Users/a223ms012t/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Users/a223ms012t/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Rd2.pdf (5 pages, 80634 bytes).
+Output written on Rd2.pdf (5 pages, 80676 bytes).
 Transcript written on Rd2.log.
 Saving output to 'splineCox-manual.pdf' ...
 Done
-You may want to clean up by 'rm -Rf C:/Users/A223MS~1/AppData/Local/Temp/RtmpsHOcHh/Rd2pdf69105406106e'
-=======
-Error in texi2dvi(file = file, pdf = TRUE, clean = clean, quiet = quiet,  : 
-  pdflatex is not available
-Error in texi2dvi(file = file, pdf = TRUE, clean = clean, quiet = quiet,  : 
-  pdflatex is not available
-Error in running tools::texi2pdf()
-You may want to clean up by 'rm -Rf C:/Users/A223MS~1/AppData/Local/Temp/RtmpQ9AOLG/Rd2pdf52e89d9218d'
->>>>>>> e6b3f1b87029d7b7b7a27d821ffd107a23caf45a
+You may want to clean up by 'rm -Rf C:/Users/A223MS~1/AppData/Local/Temp/RtmpIv6oTJ/Rd2pdf712013aa1c99'

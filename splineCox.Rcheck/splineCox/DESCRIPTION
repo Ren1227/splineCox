@@ -5,29 +5,17 @@ Title: A Two-Stage Estimation Approach to Cox Regression Using M-Spline
 Version: 0.0.1
 Author: Ren Teranishi
 Maintainer: Ren Teranishi <ren.teranishi1227@gmail.com>
-<<<<<<< HEAD
 Description: Implements a two-stage estimation approach for Cox 
-    regression using five-parameter M-spline functions to model the baseline hazard. It allows 
+    regression using five-parameter M-spline functions to model the baseline hazard. It allows
     for flexible hazard shapes and model selection based on log-likelihood criteria.
 License: GPL (>= 3)
 Encoding: UTF-8
-=======
-Description: This package implements a two-stage estimation approach for Cox 
-    regression using five-parameter spline functions to model the baseline hazard. It allows 
-    for flexible hazard shapes and model selection based on log-likelihood criteria.
-License: GPL (>= 3)
-Encoding: UTF-8
-LazyData: true
->>>>>>> e6b3f1b87029d7b7b7a27d821ffd107a23caf45a
 RoxygenNote: 7.3.2
 Roxygen: list(markdown = TRUE)
 Imports: joint.Cox
-Suggests: knitr, rmarkdown
+Suggests: knitr, rmarkdown, spelling
 VignetteBuilder: knitr
-<<<<<<< HEAD
+Language: en-US
 NeedsCompilation: no
-Packaged: 2024-12-15 17:36:58 UTC; a223ms012t
-Built: R 4.2.1; ; 2024-12-15 18:37:36 UTC; windows
-=======
-Built: R 4.2.1; ; 2024-12-15 10:05:34 UTC; windows
->>>>>>> e6b3f1b87029d7b7b7a27d821ffd107a23caf45a
+Packaged: 2024-12-15 21:15:51 UTC; a223ms012t
+Built: R 4.2.1; ; 2024-12-15 21:16:35 UTC; windows

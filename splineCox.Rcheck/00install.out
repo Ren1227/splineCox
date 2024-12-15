@@ -1,10 +1,7 @@
 * installing *source* package 'splineCox' ...
 ** using staged installation
 ** R
-<<<<<<< HEAD
 ** inst
-=======
->>>>>>> e6b3f1b87029d7b7b7a27d821ffd107a23caf45a
 ** byte-compile and prepare package for lazy loading
 ** help
 *** installing help indices

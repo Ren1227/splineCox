@@ -24,8 +24,7 @@ library(joint.Cox)  # Required for example data
 
 # Example Dataset
 
-The `dataOvarian` dataset from the `joint.Cox` package contains time-to-event data, event indicators, 
-and covariates for ovarian cancer patients.
+The `dataOvarian` dataset from the `joint.Cox` package contains time-to-event data, event indicators, and covariates for ovarian cancer patients.
 
 ```{r example-data}
 # Load the dataset
@@ -58,7 +57,8 @@ print(reg2)
 The output of the model includes:
 - The best-fitting baseline hazard shape.
 - Estimates for the regression coefficients (`beta`) and the baseline hazard scale parameter (`gamma`).
-- Log-likelihood for model selection.
+- Log-likelihood, AIC and BIC for selected model.
+- Log-likelihoods of other models.
 
 Below are the results from the example:
 

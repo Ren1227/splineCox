@@ -6,14 +6,15 @@ Version: 0.0.1
 Author: Ren Teranishi
 Maintainer: Ren Teranishi <ren.teranishi1227@gmail.com>
 Description: Implements a two-stage estimation approach for Cox 
-    regression using five-parameter M-spline functions to model the baseline hazard. It allows 
+    regression using five-parameter M-spline functions to model the baseline hazard. It allows
     for flexible hazard shapes and model selection based on log-likelihood criteria.
 License: GPL (>= 3)
 Encoding: UTF-8
 RoxygenNote: 7.3.2
 Roxygen: list(markdown = TRUE)
 Imports: joint.Cox
-Suggests: knitr, rmarkdown
+Suggests: knitr, rmarkdown, spelling
 VignetteBuilder: knitr
+Language: en-US
 NeedsCompilation: no
-Packaged: 2024-12-15 17:36:58 UTC; a223ms012t
+Packaged: 2024-12-15 21:15:51 UTC; a223ms012t
