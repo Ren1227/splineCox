@@ -12,3 +12,4 @@
 ^doc$
 ^texput\.log$
 ^\.github$
+^CRAN-SUBMISSION$
