@@ -24,8 +24,7 @@ library(joint.Cox)  # Required for example data
 
 # Example Dataset
 
-The `dataOvarian` dataset from the `joint.Cox` package contains time-to-event data, event indicators, 
-and covariates for ovarian cancer patients.
+The `dataOvarian` dataset from the `joint.Cox` package contains time-to-event data, event indicators, and covariates for ovarian cancer patients.
 
 ```{r example-data}
 # Load the dataset
@@ -48,12 +47,9 @@ M <- c("constant", "increase", "decrease")
 
 # Fit the model
 reg2 <- splineCox.reg2(t.event, event, Z, model = M)
-<<<<<<< HEAD
-=======
 
 # Display the results
 print(reg2)
->>>>>>> e6b3f1b87029d7b7b7a27d821ffd107a23caf45a
 ```
 
 # Interpreting Results
@@ -61,12 +57,8 @@ print(reg2)
 The output of the model includes:
 - The best-fitting baseline hazard shape.
 - Estimates for the regression coefficients (`beta`) and the baseline hazard scale parameter (`gamma`).
-<<<<<<< HEAD
 - Log-likelihood, AIC and BIC for model selection.
 - Log-likelihoods of other models
-=======
-- Log-likelihood for model selection.
->>>>>>> e6b3f1b87029d7b7b7a27d821ffd107a23caf45a
 
 Below are the results from the example:
 
