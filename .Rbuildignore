@@ -7,11 +7,8 @@
 ^\\.gitignore$
 ^vignettes/.gitignore$
 ^LICENSE\.md$
-<<<<<<< HEAD
 ^Meta$
 ^cran-comments\.md$
 ^doc$
 ^texput\.log$
-=======
-^doc$
-^Meta$
+^\.github$
