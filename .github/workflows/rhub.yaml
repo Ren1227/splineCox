@@ -79,10 +79,10 @@ jobs:
       - name: Install pkg-config on macOS
         if: runner.os == 'macOS'
         run: |
-          if ! brew list pkg-config@0.29.2 > /dev/null 2>&1; then
-            brew install pkg-config@0.29.2
+          if ! brew list pkg-config > /dev/null 2>&1; then
+            brew install pkg-config
           else
-            echo "pkg-config@0.29.2 is already installed."
+            echo "pkg-config is already installed."
           fi
       - uses: r-hub/actions/platform-info@v1
         with:
