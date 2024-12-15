@@ -57,8 +57,8 @@ print(reg2)
 The output of the model includes:
 - The best-fitting baseline hazard shape.
 - Estimates for the regression coefficients (`beta`) and the baseline hazard scale parameter (`gamma`).
-- Log-likelihood, AIC and BIC for model selection.
-- Log-likelihoods of other models
+- Log-likelihood, AIC and BIC for selected model.
+- Log-likelihoods of other models.
 
 Below are the results from the example:
 
