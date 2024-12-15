@@ -1,15 +1,20 @@
 Package: splineCox
 Type: Package
-Title: A two-stage estimation approach to Cox regression using M-spline function
+Title: A Two-Stage Estimation Approach to Cox Regression Using M-Spline Function
 Version: 0.0.1
 Author: Ren Teranishi
 Maintainer: Ren Teranishi <ren.teranishi1227@gmail.com>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: This package implements a two-stage estimation approach for Cox 
+    regression using five-parameter spline functions to model the baseline hazard. It allows 
+    for flexible hazard shapes and model selection based on log-likelihood criteria.
 License: GPL (>= 3)
 Encoding: UTF-8
-LazyData: true
 RoxygenNote: 7.3.2
 Roxygen: list(markdown = TRUE)
 Imports: 
     joint.Cox
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: 
+    knitr

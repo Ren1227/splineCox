@@ -49,3 +49,16 @@ with model names as row names.}
 and selects the best fitting model based on the minimization of the log-likelihood function.
 The function calculates the estimates for the model parameters (beta) and the baseline hazard scale parameter (gamma), using non-linear optimization.
 }
+\examples{
+# Example data
+library(joint.Cox)
+data(dataOvarian)
+t.event = dataOvarian$t.event
+event = dataOvarian$event
+Z = dataOvarian$CXCL12
+
+M = c("constant", "increase", "decrease")
+reg2 <- splineCox.reg2(t.event, event, Z, model = M)
+print(reg2)
+
+}
