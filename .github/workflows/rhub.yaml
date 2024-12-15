@@ -76,9 +76,9 @@ jobs:
         with:
           job-config: ${{ matrix.config.job-config }}
           token: ${{ secrets.RHUB_TOKEN }}
-      - name: Install pkg-config on macOS
-        if: startsWith(matrix.config.os, 'macos')
-        run: brew install pkg-config
+      - name: Install pkgconf on macOS
+        if: runner.os == 'macOS'
+        run: brew install pkgconf
       - uses: r-hub/actions/platform-info@v1
         with:
           token: ${{ secrets.RHUB_TOKEN }}
