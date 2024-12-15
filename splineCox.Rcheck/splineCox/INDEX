@@ -1,0 +1,4 @@
+splineCox.reg1          Fitting the five-parameter spline Cox model
+                        giving a specified shape
+splineCox.reg2          Fitting the five-parameter spline Cox model
+                        with a specified shape, selecting the best fit

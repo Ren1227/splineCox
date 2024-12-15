@@ -22,7 +22,17 @@
 #'   \item{loglik}{A named vector containing the log-likelihood (\code{LogLikelihood}),
 #'                 Akaike Information Criterion (\code{AIC}), and Bayesian Information
 #'                 Criterion (\code{BIC})}
-
+#' @examples
+#' # Example data
+#' library(joint.Cox)
+#' data(dataOvarian)
+#' t.event = dataOvarian$t.event
+#' event = dataOvarian$event
+#' Z = dataOvarian$CXCL12
+#'
+#' reg1 <- splineCox.reg1(t.event, event, Z, model = "constant")
+#' print(reg1)
+#'
 splineCox.reg1 <- function (t.event, event, Z, xi1 = min(t.event), xi3 = max(t.event),
                             model = "constant", p0 = rep(0, 1 + ncol(as.matrix(Z))))
 {

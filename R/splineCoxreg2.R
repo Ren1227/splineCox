@@ -26,7 +26,18 @@
 #'                 Criterion (\code{BIC}) for the best-fitting model}
 #'   \item{other_models}{A data frame containing the log-likelihood (\code{LogLikelihood}) for all other evaluated models,
 #'                            with model names as row names.}
-
+#' @examples
+#' # Example data
+#' library(joint.Cox)
+#' data(dataOvarian)
+#' t.event = dataOvarian$t.event
+#' event = dataOvarian$event
+#' Z = dataOvarian$CXCL12
+#'
+#' M = c("constant", "increase", "decrease")
+#' reg2 <- splineCox.reg2(t.event, event, Z, model = M)
+#' print(reg2)
+#'
 splineCox.reg2 <- function(t.event, event, Z, xi1 = min(t.event), xi3 = max(t.event),
                            model = names(shape.list), p0 = rep(0, 1 + ncol(as.matrix(Z))))
 {

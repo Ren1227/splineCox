@@ -45,3 +45,15 @@ Criterion (\code{BIC})}
 \code{splineCox.reg1} estimates the parameters of a five-parameter spline Cox model based on a specified shape for the baseline hazard function.
 The function calculates the estimates for the model parameters (beta) and the baseline hazard scale parameter (gamma), using non-linear optimization.
 }
+\examples{
+# Example data
+library(joint.Cox)
+data(dataOvarian)
+t.event = dataOvarian$t.event
+event = dataOvarian$event
+Z = dataOvarian$CXCL12
+
+reg1 <- splineCox.reg1(t.event, event, Z, model = "constant")
+print(reg1)
+
+}
