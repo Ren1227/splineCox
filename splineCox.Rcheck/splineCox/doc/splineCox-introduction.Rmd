@@ -48,6 +48,9 @@ M <- c("constant", "increase", "decrease")
 
 # Fit the model
 reg2 <- splineCox.reg2(t.event, event, Z, model = M)
+
+# Display the results
+print(reg2)
 ```
 
 # Interpreting Results
@@ -55,8 +58,7 @@ reg2 <- splineCox.reg2(t.event, event, Z, model = M)
 The output of the model includes:
 - The best-fitting baseline hazard shape.
 - Estimates for the regression coefficients (`beta`) and the baseline hazard scale parameter (`gamma`).
-- Log-likelihood, AIC and BIC for model selection.
-- Log-likelihoods of other models
+- Log-likelihood for model selection.
 
 Below are the results from the example:
 

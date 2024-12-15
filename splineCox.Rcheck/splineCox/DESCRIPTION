@@ -1,6 +1,7 @@
 Package: splineCox
 Type: Package
-Title: A Two-Stage Estimation Approach to Cox Regression Using M-Spline Function
+Title: A Two-Stage Estimation Approach to Cox Regression Using M-Spline
+        Function
 Version: 0.0.1
 Author: Ren Teranishi
 Maintainer: Ren Teranishi <ren.teranishi1227@gmail.com>
@@ -11,12 +12,9 @@ License: GPL (>= 3)
 Encoding: UTF-8
 RoxygenNote: 7.3.2
 Roxygen: list(markdown = TRUE)
-Imports: 
-    joint.Cox
-Suggests: 
-    knitr,
-    rmarkdown,
-    spelling
-VignetteBuilder: 
-    knitr
-Language: en-US
+Imports: joint.Cox
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr
+NeedsCompilation: no
+Packaged: 2024-12-15 17:36:58 UTC; a223ms012t
+Built: R 4.2.1; ; 2024-12-15 18:37:36 UTC; windows

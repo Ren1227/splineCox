@@ -1,5 +1,13 @@
 ^.*\.Rproj$
+^\\.git$
 ^\.Rproj\.user$
+^\\.RData$
+^\\.Rhistory$
+^\\.Rcheck$
+^\\.gitignore$
+^vignettes/.gitignore$
 ^LICENSE\.md$
-^doc$
 ^Meta$
+^cran-comments\.md$
+^doc$
+^texput\.log$
